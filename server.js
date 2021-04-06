@@ -45,6 +45,6 @@ app.get('/api/heroes/:heroesName', (request, response)=>{
   response.json(heroes[heroName])
 })
 
-app.listen(PORT, ()=>{
+app.listen(process.env.PORT || PORT, ()=>{
   console.log(`Server running on port ${PORT}`)
 })//another method that comes with express: a variety of http
